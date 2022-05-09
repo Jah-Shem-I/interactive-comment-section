@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <meta name="description" content="This is a website that displays an interactive comment section.">
+  <!-- <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png"> -->
+  
+  <title>Interactive Comment Section</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;700&display=swap" rel="stylesheet">
+</head>
+<body>
+<div class="wrapper">
+    <div class="comment-wrap-1">
+        <div id="comment-1" class="comment">
+            <div class="comment-header comment-header-1">
+                <img class="first-img" src="" alt="A user's profile picture.">
+                <p class="username first-username"></p>
+                <p class="time first-time"></p>
+            </div>
+            <p class="main-text first-main-text"></p>
+            <div class="likes">
+                <button class="plus"><img class="plus-img" src="images/icon-plus.svg" alt="The icon for the plus button."></button>
+                <p class="num-of-likes first-score counter-1"></p>
+                <button class="minus"><img class="minus-img" src="images/icon-minus.svg" alt="The icon for the subtract button."></button>          </div>
+            <div class="reply">
+                <img src="images/icon-reply.svg" alt="The reply button's icon.">
+                <p>Reply</p>
+            </div>
+        </div>
+    </div>
+    <div class="comment-wrap-2">
+        <div id="comment-2" class="comment">
+            <div class="comment-header comment-header-2">
+                <img class="first-img second-img" src="" alt="A user's profile picture.">
+                <p class="username second-username"></p>
+                <p class="time second-time"></p>
+            </div>
+            <p class="main-text second-main-text"></p>
+            <div class="likes">
+                <button class="plus plus-2"><img class="plus-img" src="images/icon-plus.svg" alt="The icon for the plus button."></button>
+                <p class="num-of-likes second-score counter-2"></p>
+                <button class="minus minus-2"><img class="minus-img" src="images/icon-minus.svg" alt="The icon for the subtract button."></button>
+            </div>
+            <div class="reply reply-2">
+                <img src="images/icon-reply.svg" alt="The reply button's icon.">
+                <p>Reply</p>
+            </div>
+        </div>
+    </div>
+    <div class="replies">
+        <div class="comment-wrap-3">
+            <div class="comment">
+                <div class="comment-header comment-header-3">
+                    <img class="first-img first-reply-img" src="" alt="A user's profile picture.">
+                    <p class="username first-reply-username"></p>
+                    <p class="time first-reply-time"></p>
+                </div>
+                <p class="main-text first-reply-main-text"><span class="reply-to first-reply-to"></span></p>
+                <div class="likes">
+                    <button class="plus plus-3"><img class="plus-img" src="images/icon-plus.svg" alt="The icon for the plus button."></button>
+                    <p class="num-of-likes first-reply-score counter-3"></p>
+                    <button class="minus minus-3"><img class="minus-img" src="images/icon-minus.svg" alt="The icon for the subtract button."></button>
+                </div>
+                <div class="reply reply-3">
+                    <img src="images/icon-reply.svg" alt="The reply button's icon.">
+                    <p>Reply</p>
+                </div>
+            </div>
+        </div>
+        <div class="comment second-reply">
+            <div class="comment-header second-comment-header">
+                <img class="first-img second-reply-img" src="" alt="A user's profile picture.">
+                <p id="user-replied-name" class="username second-reply-username"></p>
+                <span class="user-replied">you</span>
+                <p class="time second-reply-time"></p>
+            </div>
+            <p class="main-text second-reply-main-text"><span class="reply-to second-reply-to"></span></p>
+            <div class="likes">
+                <button class="plus plus-4"><img class="plus-img" src="images/icon-plus.svg" alt="The icon for the plus button."></button>
+                <p class="num-of-likes second-reply-score counter-4"></p>
+                <button class="minus minus-4"><img class="minus-img" src="images/icon-minus.svg" alt="The icon for the subtract button."></button>
+            </div>
+            <div id="dm" class="delete-modal">
+                <img class="delete-icn" src="images/icon-delete.svg" alt="The delete button's icon.">
+                <p class="delete-text">Delete</p>
+            </div>
+            <div class="edit">
+                <img class="edit-icn" src="images/icon-edit.svg" alt="The edit button's icon.">
+                <p class="edit-text">Edit</p>
+            </div>
+            <button class="update-btn">Update</button>
+        </div>
+    </div>
+</div>
+
+<div class="modal">
+    <div class="modal-content">
+      <p class="modal-header">Delete comment</p>
+      <p class="modal-text">Are you sure you want to delete this comment? This will remove the comment
+        and can't be undone.</p>
+      <button class="cancel">NO, CANCEL</button>         
+      <button class="delete">YES, DELETE</button>
+    </div>  
+</div>
+<div class="modal modal-1">
+    <div class="modal-content modal-content-1">
+      <p class="modal-header">Delete comment</p>
+      <p class="modal-text">Are you sure you want to delete this comment? This will remove the comment
+        and can't be undone.</p>
+      <button class="cancel cancel-1">NO, CANCEL</button>         
+      <button class="delete delete-1">YES, DELETE</button>
+    </div>  
+</div>
+<div class="modal modal-2">
+    <div class="modal-content modal-content-2">
+      <p class="modal-header">Delete comment</p>
+      <p class="modal-text">Are you sure you want to delete this comment? This will remove the comment
+        and can't be undone.</p>
+      <button class="cancel cancel-2">NO, CANCEL</button>         
+      <button class="delete delete-2">YES, DELETE</button>
+    </div>  
+</div>
+<div class="modal modal-3">
+    <div class="modal-content modal-content-3">
+      <p class="modal-header">Delete comment</p>
+      <p class="modal-text">Are you sure you want to delete this comment? This will remove the comment
+        and can't be undone.</p>
+      <button class="cancel cancel-3">NO, CANCEL</button>         
+      <button class="delete delete-3">YES, DELETE</button>
+    </div>  
+</div>
+<div class="modal modal-4">
+    <div class="modal-content modal-content-4">
+      <p class="modal-header">Delete comment</p>
+      <p class="modal-text">Are you sure you want to delete this comment? This will remove the comment
+        and can't be undone.</p>
+      <button class="cancel cancel-4">NO, CANCEL</button>         
+      <button class="delete delete-4">YES, DELETE</button>
+    </div>  
+</div>
+  
+
+<div class="user-response">
+    <textarea class="textarea-3" placeholder="Add a comment..."></textarea>
+    <img class="user-img" alt="The user's profile picture.">
+    <button class="send">Send</button>
+</div>
+</body>
+<script src="scripts.js"></script>
+</html>

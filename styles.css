@@ -1,0 +1,416 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: hsl(228, 33%, 97%);
+    padding-top: 30px;
+    padding-bottom: 30px;
+    overflow-y: scroll;
+}
+
+button {
+    width: 35px;
+    background-color: hsl(228, 33%, 97%);
+}
+
+html {
+    font-family: 'Rubik', sans-serif;
+}
+
+::placeholder {
+    font-size: 18px;
+}
+
+textarea {
+    min-height: 100px;
+    max-height: 100px;
+    min-width: 100%;
+    max-width: 100%;
+    font-size: 15px;
+    border: 1px solid hsl(239, 57%, 85%);
+    border-radius: 5px;
+}
+
+/* =======================
+    Class Selectors
+======================= */
+.comment-border-link {
+    display: block;
+    position: absolute;
+    top: 50px;
+    top: 590px;
+    left: 15px;
+    width: 12px;
+    height: calc(100% - 305px);
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+    background-color: rgba(0, 0, 0, 0.1);
+    background-clip: padding-box;
+}
+
+.textarea-1 {
+    min-height: 100px;
+    max-height: 100px;
+    min-width: 100%;
+    max-width: 100%;
+    font-size: 15px;
+    border: 1px solid hsl(239, 57%, 85%);
+    border-radius: 5px;
+    margin-top: 15px;
+}
+
+.edit, .update-btn {
+    margin-right: 10px;
+}
+
+.delete-text {
+    color: hsl(358, 79%, 66%);
+    font-weight: 500;
+    padding-left: 5px;
+}
+
+.edit-text {
+    color: hsl(212, 24%, 26%);
+    font-weight: 500;
+    padding-left: 5px;
+}
+
+.delete-icn {
+    height: 17px;
+}
+
+.edit-icn {
+    height: 17px;
+}
+
+.reply, .delete-modal, .edit {
+    margin-top: 25px;
+    display: flex;
+    float: right;
+}
+
+.reply p {
+    margin-left: 10px;
+    color: hsl(212, 24%, 26%);
+    font-weight: 500;
+}
+
+.reply img {
+    height: 15px;
+    width: 15px;
+    margin-top: 2px;
+}
+
+.replies {
+    margin-left: 20px;
+}
+
+.reply-to {
+    font-weight: 700;
+    color: hsl(238, 40%, 52%);
+}
+
+.comment {
+    background-color: white;
+    min-height: 30px;
+    width: 90%;
+    margin: 0 auto;
+    margin-bottom: 15px;
+    padding: 15px;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.first-img {
+    height: 35px;
+    width: 35px;
+}
+
+.username {
+    font-weight: 500;
+    margin: 10px 15px 0 15px;
+}
+
+.comment-header {
+    display: flex;
+}
+
+.time {
+    margin-top: 10px;
+    color: hsl(211, 10%, 45%);
+}
+
+.main-text {
+    line-height: 1.5;
+    margin-top: 15px;
+    color: hsl(211, 10%, 45%);
+    display: block;
+}
+
+.likes {
+    display: inline-flex;
+    margin-top: 15px;
+    background-color: hsl(228, 33%, 97%);
+    border-radius: 15px;
+}
+
+.num-of-likes {
+    text-align: center;
+    height: 30px;
+    width: 35px;
+    margin-top: 7px; 
+    font-size: 18px;
+    color: hsl(212, 24%, 26%);
+    font-weight: 500;
+}
+
+.minus {
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+    position: relative;
+}
+
+.minus-img {
+    position: relative;
+    bottom: 4px;
+}
+
+.plus {
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+}
+
+.minus, .plus {
+    border: 0;
+}
+
+.user-response {
+    min-height: 200px;
+    width: 90%;
+    margin: 0 auto;
+    background-color: white;
+    padding: 20px;
+}
+
+.user-img {
+    height: 35px;
+    width: 35px;
+    margin-top: 20px;
+}
+
+.user-replied {
+    color: white;
+    background-color: hsl(238, 40%, 52%);
+    height: 20px;
+    padding-top: 1px;
+    padding-left: 7px;
+    padding-right: 7px;
+    font-size: 14px;
+    margin-top: 8px;
+    position: relative;
+    margin-right: 15px;
+}
+
+.user-response {
+    border-radius: 10px;
+}
+
+#user-replied-name {
+    margin: 10px 10px 0 15px;
+}
+
+.send, .update-btn {
+    background-color: hsl(238, 40%, 52%);
+    color: white;
+    font-weight: 700;
+    font-size: 18px;
+    border-radius: 10px;
+    border: 0;
+    margin-top: 20px;
+    height: 40px;
+    width: 80px;
+    float: right;
+}
+
+.update-btn {
+    margin-top: 13px;
+    display: none;
+    background-color: hsl(228, 42%, 95%);
+    color: hsl(238, 40%, 52%);
+}
+
+.cancel, .delete {
+    border: 0;
+    width: 140px;
+    height: 50px;
+    color: white;
+    font-weight: 600;
+    font-size: 15px;
+    margin-top: 20px;
+    border-radius: 10px;
+}
+
+.cancel {
+    background-color: hsl(211, 10%, 45%);
+    margin-right: 10px;
+}
+
+.delete {
+    background-color: hsl(358, 79%, 66%);
+}
+
+.cancel-text {
+    float: right;
+    color: hsl(211, 10%, 45%);
+    font-size: 14px;
+    text-decoration: underline;
+    margin-top: 40px;
+    margin-right: 30px;
+}
+
+.first-reply-header, .second-reply-header,
+.third-reply-header, .attached-comment-header {
+    margin-bottom: 15px;
+}
+
+.modal-header {
+    font-size: 20px;
+    font-weight: 500;
+}
+
+.modal-text {
+    margin-top: 15px;
+    color: hsl(211, 10%, 45%);
+    line-height: 1.5;
+}
+
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    padding-top: 100px;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgb(0,0,0);
+    background-color: rgba(0,0,0,0.6);
+}  
+
+.modal-content {
+    background-color: #fefefe;
+    margin: auto;
+    padding: 25px;
+    border: 1px solid #888;
+    width: 90%;
+    border-radius: 10px;
+}
+
+@media screen and (min-width: 1200px) {
+    button {
+        width: 40px;
+        height: 30px;
+    }
+
+    .comment, .user-response {
+        width: 50%;
+    }
+
+    .comment {
+        min-height: 150px;
+        position: relative;
+    }
+
+    .delete-modal {
+        margin-right: 10px;
+        position: absolute;
+        top: 0;
+        right: 20px;
+    }
+
+    .edit {
+        margin-right: 20px;
+        position: absolute;
+        top: 0;
+        right: 100px;
+    }
+
+    .likes {
+        display: inline;
+        background-color: white;
+    }
+
+    .modal {
+        padding-top: 270px;
+    }
+
+    .modal-content {
+        width: 360px;
+    }
+
+    .num-of-likes {
+        margin-top: 0;
+        width: 40px;
+    }
+
+    .num-of-likes, .plus, .minus {
+        background-color: hsl(223, 19%, 93%);
+    }
+
+    .minus {
+        border-radius: 0 0 10px 10px;
+    }
+
+    .plus {
+        height: 43px;
+        border-radius: 10px 10px 0 0;
+        position: relative;
+        left: 1px;
+    }
+
+    .plus:hover, .minus:hover {
+        background-color: hsl(222, 17%, 88%);
+    }
+
+    .replies .comment {
+        width: 44%;
+        margin-left: 30.6%;
+    }
+
+    .reply {
+        position: absolute;
+        top: 0;
+        right: 30px;
+    }
+
+    .reply:hover, .send:hover, .cancel-text:hover, .edit:hover,
+    .delete-modal:hover {
+        opacity: 60%;
+    }
+
+    .likes, .minus, .num-of-likes {
+        margin-left: 2.5%;
+    }
+
+    .likes {
+        position: absolute;
+        top: 0px;
+    }
+    
+    .first-main-text, .second-main-text, 
+    .first-reply-main-text, .second-reply-main-text,
+    .comment-header-1, .comment-header-2, .comment-header-3,
+    .second-comment-header {
+        margin-left: 15%;
+        margin-right: 3%;
+    }
+
+    .reply, .edit, .delete-modal, .cancel-text, .send,
+    .plus, .minus, .update-btn, .cancel, .delete {
+        cursor: pointer;
+    }
+}
