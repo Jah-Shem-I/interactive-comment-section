@@ -230,8 +230,6 @@ fetch('data.json')
         function deleteComment(){
             deleteModal.parentElement.remove();
             modal.style.display = 'none';
-            // firstReply.remove();
-            // comment.appendChild(textarea2);
         }
 
         function closeModal(){
@@ -367,12 +365,6 @@ fetch('data.json')
             comment.classList.add('comment');
             replies.appendChild(comment);       
             commentWrap1.appendChild(replies);
-            // if(textarea2.value == ''){
-            //     send.disabled = true;
-            // }  else {
-            //    send.disabled = false;
-            // }
-            // console.log(textarea2.value);
         }
 
         function postComment(){
@@ -416,12 +408,6 @@ fetch('data.json')
             deleteDiv1.appendChild(deleteText);
             comment.appendChild(deleteDiv1);
             comment.appendChild(editDiv1);
-            // if(textarea2.value === ''){
-            //     send.disabled = true;
-            // }  else {
-            //    send.disabled = false;
-            // }
-            // console.log(textarea2.value);
         }
 
         let send2 = document.createElement('button');
@@ -462,7 +448,6 @@ fetch('data.json')
             cancelText2.textContent = 'Cancel';
             replies.classList.add('replies');
             textarea4.placeholder = 'Add a comment...';
-            // textarea4.textContent = `${firstReplyTo}`;
             comment2.appendChild(textarea4);
             comment2.appendChild(send2);
             comment2.appendChild(cancelText2);
